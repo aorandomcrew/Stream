@@ -3,12 +3,16 @@ package com.example.collections.model;
 import java.util.Objects;
 
 public class Employee {
-    public String firstName;
-    public String lastName;
+    private final String firstName;
+    private final String lastName;
+    private final double salary;
+    private final int department;
 
-    public Employee(String firstName, String lastName) {
+    public Employee(String firstName, String lastName, int department, double salary) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.department = department;
+        this.salary = salary;
     }
 
     public String getFirstName() {
@@ -18,6 +22,15 @@ public class Employee {
     public String getLastName() {
         return lastName;
     }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public int getDepartment() {
+        return department;
+    }
+
 
     @Override
     public boolean equals(Object o) {
